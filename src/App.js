@@ -1,11 +1,22 @@
-
+import { Canvas } from 'react-three-fiber'
+import { Sky } from 'drei'
+import { Physics } from 'use-cannon'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      Hello
-    </div>
+    <Canvas shadowMap sRGB>
+      <Sky sunPosition={[100, 20, 100]} />
+      <ambientLight intensity={0.25} />
+      <pointLight
+        castShadow
+        intensity={0.7}
+        position={[100, 100, 100]}
+      />
+      <Physics gravity={[0, -30, 0]}>
+        {/* world objects go here */}
+      </Physics>
+    </Canvas>
   );
 }
 
