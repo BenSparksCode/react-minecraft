@@ -2,10 +2,11 @@ import { Canvas } from 'react-three-fiber'
 import { Sky } from 'drei'
 import { Physics } from 'use-cannon'
 
+import './App.css';
+
 import { Ground } from './components/Ground'
 import { Player } from './components/Player'
-
-import './App.css';
+import { Cube } from './components/Cube'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         {/* world objects go here */}
         <Ground position={[0, 0.5, 0]}/>
         <Player position={[0, 3, 10]}/>
+        <Cube position={[0,1,0]} type='wood'/>
       </Physics>
     </Canvas>
   );
