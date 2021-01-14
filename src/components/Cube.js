@@ -26,6 +26,8 @@ export const Cube = ({ position, texture, ...props }) => {
                     map={textures[texture]}
                     key={index}
                     color={hover === index ? 'gray' : 'white'}
+                    opacity={texture === 'glass' ? 0.7 : 1}
+                    transparent
                 />
             ))}
             <boxBufferGeometry attach='geometry' />
