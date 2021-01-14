@@ -4,7 +4,7 @@ import { useStore } from './useStore'
 const actionByKey = (key) => {
     const keys = {
         KeyW: 'moveForward',
-        keyS: 'moveBackward',
+        KeyS: 'moveBackward',
         KeyA: 'moveLeft',
         KeyD: 'moveRight',
         Space: 'jump',
@@ -44,14 +44,12 @@ export const useKeyboardControls = () => {
             if (textureByKey(e.code)) {
                 setTexture(textureByKey(e.code))
             }
-            console.log(e.code, "DOWN");
         }
         const handleKeyUp = (e) => {
             // movement key
             if (actionByKey(e.code)) {
                 setMovement(state => ({ ...state, [actionByKey(e.code)]: false }))
             }
-            console.log(e.code, "UP");
         }
 
         document.addEventListener('keydown', handleKeyDown)
