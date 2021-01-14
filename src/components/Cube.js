@@ -18,13 +18,14 @@ export const Cube = ({ position, texture, ...props }) => {
                 e.stopPropagation()
                 setHover(Math.floor(e.faceIndex / 2))
             }}
+            onPointerOut={() => setHover(null)}
         >
             {[...Array(6)].map((_, index) => (
                 <meshStandardMaterial
                     attachArray='material'
                     map={textures[texture]}
                     key={index}
-                    color={hover === index ? 'lightgray' : 'white'}
+                    color={hover === index ? 'gray' : 'white'}
                 />
             ))}
             <boxBufferGeometry attach='geometry' />
