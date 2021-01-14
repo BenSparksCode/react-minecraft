@@ -2,6 +2,8 @@ import { Canvas } from 'react-three-fiber'
 import { Sky } from 'drei'
 import { Physics } from 'use-cannon'
 
+import {useStore} from './hooks/useStore'
+
 import './App.css';
 
 import { Ground } from './components/Ground'
@@ -9,6 +11,8 @@ import { Player } from './components/Player'
 import { Cube } from './components/Cube'
 
 function App() {
+  const cubes = useStore(state => state.cubes)
+
   return (
     <Canvas shadowMap sRGB>
       <Sky sunPosition={[100, 20, 100]} />
@@ -22,7 +26,10 @@ function App() {
         {/* world objects go here */}
         <Ground position={[0, 0.5, 0]}/>
         <Player position={[0, 3, 10]}/>
-        <Cube position={[0,1,0]} type='wood'/>
+
+        {cubes.map(cube => <Cube position={cube.pos} texture={cube.texture}/>)}
+
+        
       </Physics>
     </Canvas>
   );
