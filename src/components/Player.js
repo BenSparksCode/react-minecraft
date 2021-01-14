@@ -6,7 +6,7 @@ import { Vector3 } from 'three';
 import { useKeyboardControls } from '../hooks/useKeyboardControls';
 import { FPVControls } from './FPVControls'
 
-const SPEED = 6;
+const SPEED = 8
 
 export const Player = (props) => {
     const { moveForward, moveBackward, moveLeft, moveRight, jump } = useKeyboardControls()

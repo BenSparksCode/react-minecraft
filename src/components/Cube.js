@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useBox } from 'use-cannon'
 
 import * as textures from '../textures'
 
-export const Cube = ({position, type, ...props}) => {
+export const Cube = ({ position, texture, ...props }) => {
+    const [hover, setHover] = useState(null)
     const [ref] = useBox(() => ({
         type: "Static",
         position,
@@ -12,15 +13,21 @@ export const Cube = ({position, type, ...props}) => {
 
 
     return (
-        <mesh castShadow ref={ref}>
+        <mesh castShadow ref={ref}
+            onPointerMove={(e) => {
+                e.stopPropagation()
+                setHover(Math.floor(e.faceIndex / 2))
+            }}
+        >
             {[...Array(6)].map((_, index) => (
-                <meshStandardMaterial 
+                <meshStandardMaterial
                     attachArray='material'
-                    map={textures[type]}
+                    map={textures[texture]}
                     key={index}
+                    color={hover === index ? 'lightgray' : 'white'}
                 />
             ))}
-            <boxBufferGeometry attach='geometry'/>
+            <boxBufferGeometry attach='geometry' />
         </mesh>
     )
 }
