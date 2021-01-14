@@ -44,20 +44,22 @@ export const useKeyboardControls = () => {
             if (textureByKey(e.code)) {
                 setTexture(textureByKey(e.code))
             }
+            console.log(e.code, "DOWN");
         }
         const handleKeyUp = (e) => {
             // movement key
             if (actionByKey(e.code)) {
                 setMovement(state => ({ ...state, [actionByKey(e.code)]: false }))
             }
+            console.log(e.code, "UP");
         }
 
         document.addEventListener('keydown', handleKeyDown)
-        document.addEventListener('up', handleKeyUp)
+        document.addEventListener('keyup', handleKeyUp)
 
         return () => {
             document.removeEventListener('keydown', handleKeyDown)
-            document.removeEventListener('up', handleKeyUp)
+            document.removeEventListener('keyup', handleKeyUp)
         }
     })
 
