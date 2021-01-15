@@ -10,19 +10,15 @@ const setLocalStorage = (key, value) => {
 }
 
 export const useStore = create((set) => ({
-    cubes: getLocalStorage("world") || [
-        { pos: [0, 1, 0], texture: 'wood' },
-        { pos: [1, 1, 0], texture: 'dirt' },
-        { pos: [2, 1, 0], texture: 'glass' },
-        { pos: [3, 1, 0], texture: 'grass' },
-        { pos: [4, 1, 0], texture: 'log' },
-    ],
+    cubes: getLocalStorage("world") || [],
     addCube: (x, y, z, texture) => set(state => ({
         cubes: [...state.cubes, { pos: [x, y, z], texture }]
     })),
-    removeCube: (x, y, z) => set(state => state.cubes.filter(
-        cube => cube.x != x || cube.y != y || cube.z != z
-    )),
+    removeCube: (x, y, z) => set(state => ({
+        cubes: state.cubes.filter(
+            ({ pos }) => (pos[0] != x || pos[1] != y || pos[2] != z)
+        )
+    })),
     texture: 'wood',
     setTexture: (texture) => set((state) => ({ texture })),
     saveWorld: () => set(state => {
