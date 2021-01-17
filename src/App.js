@@ -2,7 +2,8 @@ import { Canvas } from 'react-three-fiber'
 import { Sky } from 'drei'
 import { Physics } from 'use-cannon'
 
-import {useStore} from './hooks/useStore'
+import { useStore } from './hooks/useStore'
+import { useInterval } from './hooks/useInterval'
 
 import './App.css';
 
@@ -11,7 +12,12 @@ import { Player } from './components/Player'
 import { Cube } from './components/Cube'
 
 function App() {
-  const cubes = useStore(state => state.cubes)
+  const [cubes, saveWorld] = useStore((state) => [state.cubes, state.saveWorld])
+
+  useInterval(() => {
+    saveWorld(cubes)
+    console.log("Saved game state.");
+  }, 10000)
 
   return (
     <Canvas shadowMap sRGB>
@@ -24,12 +30,12 @@ function App() {
       />
       <Physics gravity={[0, -30, 0]}>
         {/* world objects go here */}
-        <Ground position={[0, 0.5, 0]}/>
-        <Player position={[0, 3, 10]}/>
+        <Ground position={[0, 0.5, 0]} />
+        <Player position={[0, 3, 10]} />
 
-        {cubes.map(cube => <Cube position={cube.pos} texture={cube.texture}/>)}
+        {cubes.map(cube => <Cube position={cube.pos} texture={cube.texture} />)}
 
-        
+
       </Physics>
     </Canvas>
   );
