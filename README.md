@@ -1,5 +1,7 @@
 # React Minecraft
 
+![React Minecraft](/images/react-text-screenshot.png)
+
 [Try the game here!](https://bensparkscode.github.io/react-minecraft/)
 
 Based on [this](https://www.youtube.com/watch?v=aWQmuTiThTs) tutorial.
@@ -10,9 +12,10 @@ Based on [this](https://www.youtube.com/watch?v=aWQmuTiThTs) tutorial.
 - S                 = Backward
 - A                 = Left
 - D                 = Right
-- Nums              = Change block type
-- Left Click        = Place block
-- ALT + Left Click  = Remove block
+- SPACE             = Jump 
+- NUMS              = Change block type
+- LEFT CLICK        = Place block
+- ALT + LEFT CLICK  = Remove block
 
 ## Tech Stack
 
