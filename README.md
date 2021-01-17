@@ -1,5 +1,7 @@
 # React Minecraft
 
+![React Minecraft](/images/react-text-screenshot.png)
+
 [Try the game here!](https://bensparkscode.github.io/react-minecraft/)
 
 Based on [this](https://www.youtube.com/watch?v=aWQmuTiThTs) tutorial.
