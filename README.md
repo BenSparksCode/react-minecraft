@@ -1,6 +1,8 @@
 # React Minecraft
 
-Based on [this](https://www.youtube.com/watch?v=aWQmuTiThTs) tutorial
+[Try the game here!](https://bensparkscode.github.io/react-minecraft/)
+
+Based on [this](https://www.youtube.com/watch?v=aWQmuTiThTs) tutorial.
 
 ## Controls
 
