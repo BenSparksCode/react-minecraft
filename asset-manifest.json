@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-minecraft/static/css/main.5026532c.chunk.css",
+    "main.js": "/react-minecraft/static/js/main.67546653.chunk.js",
+    "main.js.map": "/react-minecraft/static/js/main.67546653.chunk.js.map",
+    "runtime-main.js": "/react-minecraft/static/js/runtime-main.bf717c4b.js",
+    "runtime-main.js.map": "/react-minecraft/static/js/runtime-main.bf717c4b.js.map",
+    "static/js/2.19633a96.chunk.js": "/react-minecraft/static/js/2.19633a96.chunk.js",
+    "static/js/2.19633a96.chunk.js.map": "/react-minecraft/static/js/2.19633a96.chunk.js.map",
+    "static/js/3.a902e88b.chunk.js": "/react-minecraft/static/js/3.a902e88b.chunk.js",
+    "static/js/3.a902e88b.chunk.js.map": "/react-minecraft/static/js/3.a902e88b.chunk.js.map",
+    "index.html": "/react-minecraft/index.html",
+    "static/css/main.5026532c.chunk.css.map": "/react-minecraft/static/css/main.5026532c.chunk.css.map",
+    "static/js/2.19633a96.chunk.js.LICENSE.txt": "/react-minecraft/static/js/2.19633a96.chunk.js.LICENSE.txt",
+    "static/media/dirt.59ed3279.jpg": "/react-minecraft/static/media/dirt.59ed3279.jpg",
+    "static/media/glass.4b881df7.png": "/react-minecraft/static/media/glass.4b881df7.png",
+    "static/media/grass.eb5fc8eb.jpg": "/react-minecraft/static/media/grass.eb5fc8eb.jpg",
+    "static/media/wood.f0c57697.png": "/react-minecraft/static/media/wood.f0c57697.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf717c4b.js",
+    "static/js/2.19633a96.chunk.js",
+    "static/css/main.5026532c.chunk.css",
+    "static/js/main.67546653.chunk.js"
+  ]
+}
