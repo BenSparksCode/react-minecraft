@@ -19,8 +19,8 @@ Based on [this](https://www.youtube.com/watch?v=aWQmuTiThTs) tutorial.
 
 ## Tech Stack
 
-- React
-- Three.js (3D environment)
-- Cannon.js (Physics engine)
-- Zustand (Lightweight state management)
-- localStorage (Saves game state to localStorage in your browser every 10 seconds)
+- [React](https://github.com/facebook/react)
+- [Three.js](https://github.com/mrdoob/three.js/) (3D environment)
+- [Cannon.js](https://github.com/schteppe/cannon.js) (Physics engine)
+- [Zustand](https://github.com/pmndrs/zustand) (Lightweight state management)
+- [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) (Saves game state to localStorage in your browser every 10 seconds)
